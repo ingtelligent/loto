@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Mystery Box</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.4/tailwind.min.css'><link rel="stylesheet" href="./style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+      </script>
+</head>
+  <body>
+    <div class="container">
+      <h1>Lô Tô</h1>
+      <div class="row">
+          <div class="col-sm">
+              <input type="number" id="lownumber" value="1" />
+              and
+              <input type="number" id="highnumber" value="90" />
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-sm">
+              <h2>Số cần dò:</h2>
+              <input type="number" id="findNumber" oninput="checkNumber()" placeholder="Type...">
+              <div class="alert alert-success" role="alert" hidden>
+                  <div id="textCheckNumber"></div>
+              </div>
+              <div class="alert alert-danger" role="alert" hidden>
+                  <div id="textCheckNumberWrong"></div>
+              </div>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm">
+          <button id="stopit" type="button" class="btn btn-warning" onclick="clearScreen()">Clear!</button>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="col-sm">
+        <div id="cube" class="h-40 w-40 static flex justify-center items-center cursor-pointer">
+          <div id="randomnumber"></div>
+          <div class="cube back h-40 w-40 absolute top-0 left-0"></div>
+          <div class="cube top h-40 w-40 absolute top-0 left-0"></div>
+          <div class="cube left h-40 w-40 absolute top-0 left-0"></div>
+          <div class="cube right h-40 w-40 absolute top-0 left-0"></div>
+          <div class="powerup absolute"></div>
+        </div>
+      </div>
+    </div>
+    <br><br><br><br><br><br><br>
+    <div class="row">
+      <div class="col-sm">
+          <div id="result"></div>
+      </div>
+    </div>
+    <audio autoplay loop controls id="audio">
+      <source src="./nhạc/nền.mp3">
+    </audio>
+  <script src="./script.js"></script>
+</body>
+</html>
