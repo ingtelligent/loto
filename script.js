@@ -84,7 +84,7 @@ function award() {
                   music.play("./nhạc/nền.mp3");
                   if (numRand == [i]) {
                     powerup.style.backgroundImage = "url('./img/"+[i]+".jpg')";
-                    var audio = new Audio('./nhạc/'+[i]+'.mp3');
+                    var audio = new Audio('./music/'+[i]+'.mp3');
                     audio.play();
                   } 
                 }
